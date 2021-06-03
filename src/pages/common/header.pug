@@ -1,2 +1,16 @@
-header
-  p Header
+header.header.block
+  .block--in.header--in
+    .header--logo
+      include ../includes/index/logo
+
+    .header--right
+      .header-nav
+        include ../includes/index/nav
+
+      .header--lang
+        p Ro
+
+      .header--button
+        include ../mixins/button
+
+        +button("tel:+37379450640", "", "+373 79 450 6410", "-small")

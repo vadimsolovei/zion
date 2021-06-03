@@ -1,0 +1,18 @@
+.nav {
+  & ul {
+    display: flex;
+  }
+
+  &--item {
+    margin-right: 40px;
+    color: $gray;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 28px;
+    transition: color 0.2s;
+
+    &:hover {
+      color: darken($gray, 40%);
+    }
+  }
+}
