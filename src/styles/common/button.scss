@@ -5,12 +5,22 @@
   font-size: 30px;
   line-height: 36px;
   letter-spacing: -0.03em;
+  color: $white;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: darken($blue, 10%);
+  }
 
   & svg {
     width: 24px;
     height: 24px;
     margin-right: 10px;
     fill: transparent;
+  }
+
+  & span {
+    color: rgba($white, 0.6);
   }
 
   &.-small {
@@ -21,10 +31,9 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
-    transition: 0.2s;
+    color: $blue;
 
     &:hover {
-      cursor: pointer;
       background-color: $blue;
       color: $white;
     }

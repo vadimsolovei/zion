@@ -1,0 +1,12 @@
+.heading {
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 79px;
+  letter-spacing: -0.045em;
+
+  &.-h1 {
+    margin-bottom: 55px;
+    font-size: 84px;
+    line-height: 92px;
+  }
+}

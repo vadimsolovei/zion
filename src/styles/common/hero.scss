@@ -1,0 +1,23 @@
+.hero {
+  margin-bottom: 150px;
+
+  &--in {
+    display: flex;
+    position: relative;
+  }
+
+  &--content {
+    width: 550px;
+    flex-shrink: 0;
+
+    & .button {
+      display: inline-block;
+      margin-bottom: 75px;
+    }
+  }
+
+  &--image {
+    position: relative;
+    right: -150px;
+  }
+}

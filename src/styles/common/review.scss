@@ -1,0 +1,31 @@
+.review {
+  color: $black;
+
+  &--text {
+    margin-bottom: 30px;
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 500;
+  }
+
+  &--footer {
+    display: flex;
+    align-items: center;
+  }
+
+  &--author_photo {
+    margin-right: 30px;
+  }
+
+  &--author_info {
+    & p {
+      font-size: 30px;
+      line-height: 36px;
+      font-weight: bold;
+    }
+
+    & span {
+      line-height: 31px;
+    }
+  }
+}

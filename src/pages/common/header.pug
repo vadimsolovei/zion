@@ -1,5 +1,5 @@
 header.header.block
-  .block--in.header--in
+  .header--in.block--in
     .header--logo
       include ../includes/index/logo
 
@@ -11,6 +11,4 @@ header.header.block
         p Ro
 
       .header--button
-        include ../mixins/button
-
-        +button("tel:+37379450640", "", "+373 79 450 6410", "-small")
+        a.button.-small(href='tel:+37379450640') +373 79 450 6410
