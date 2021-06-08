@@ -1,0 +1,33 @@
+.why_us {
+  &--in {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -200px;
+      left: -390%;
+      width: 500%;
+      height: 120%;
+      background: linear-gradient(
+          180deg,
+          #effcff 0%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        #ffffff;
+      border-radius: 0 40px 40px 0;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -30px;
+      right: -8%;
+      width: 941px;
+      height: 335px;
+      background-image: url("../img/logo-big.png");
+      background-repeat: no-repeat;
+    }
+  }
+}

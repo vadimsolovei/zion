@@ -1,0 +1,27 @@
+.achievements {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 65px;
+
+  &--item {
+    display: flex;
+    margin-bottom: 100px;
+  }
+
+  &--icon {
+    width: 66px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &--description {
+    width: 460px;
+
+    & .block--title {
+      margin-bottom: 10px;
+    }
+  }
+}
