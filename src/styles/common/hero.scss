@@ -7,7 +7,7 @@
   }
 
   &--content {
-    max-width: 550px;
+    max-width: 560px;
     flex-shrink: 0;
 
     & .button {
@@ -18,6 +18,6 @@
 
   &--image {
     position: relative;
-    right: -150px;
+    right: -140px;
   }
 }
