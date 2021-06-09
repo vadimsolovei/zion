@@ -1,0 +1,25 @@
+.cta {
+  &--in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 115px;
+    background-image: url("../img/cta_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+    box-sizing: border-box;
+  }
+
+  &--description {
+    max-width: 510px;
+  }
+
+  &--title {
+    margin-bottom: 20px;
+    font-size: 44px;
+    line-height: 48px;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+}
