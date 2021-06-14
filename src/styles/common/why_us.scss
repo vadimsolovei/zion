@@ -1,11 +1,12 @@
 .why_us {
   &--in {
     position: relative;
+    padding-top: 200px;
 
     &::before {
       content: "";
       position: absolute;
-      top: -200px;
+      top: 0;
       left: -390%;
       width: 500%;
       height: 120%;
@@ -22,12 +23,16 @@
     &::after {
       content: "";
       position: absolute;
-      top: -30px;
+      top: 170px;
       right: -8%;
       width: 941px;
       height: 335px;
       background-image: url("../img/logo-big.png");
       background-repeat: no-repeat;
+    }
+
+    & .block--title {
+      margin-bottom: 30px;
     }
   }
 }
