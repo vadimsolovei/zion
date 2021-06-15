@@ -1,20 +1,17 @@
 .cta {
   margin-bottom: 100px;
+  background-image: url("../img/cta_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &--in {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 80px 115px;
-    background-image: url("../img/cta_bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 40px;
+    padding: 170px 0 170px 115px;
     box-sizing: border-box;
   }
 
   &--description {
     max-width: 510px;
+    margin-bottom: 70px;
   }
 
   &--title {

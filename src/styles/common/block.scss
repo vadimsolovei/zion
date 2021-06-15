@@ -3,6 +3,10 @@
     padding-top: 165px;
   }
 
+  &.-blue {
+    background-color: $blue;
+  }
+
   &--in {
     max-width: 1380px;
     margin: 0 auto;
@@ -30,6 +34,10 @@
       font-size: 30px;
       line-height: 36px;
     }
+
+    &.-white {
+      color: $white;
+    }
   }
 
   &--tag {
@@ -40,5 +48,9 @@
     color: $blue;
     letter-spacing: 0.11em;
     text-transform: uppercase;
+
+    &.-white {
+      color: rgba($white, 0.6);
+    }
   }
 }
