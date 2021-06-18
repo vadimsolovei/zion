@@ -1,0 +1,60 @@
+.promo {
+  position: relative;
+  padding: 120px 0 225px;
+  background-image: linear-gradient(
+      92.62deg,
+      $blue 8.61%,
+      rgba($blue, 0) 84.04%
+    ),
+    url("../img/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, $blue 0%, rgba($blue, 0) 100%);
+  }
+
+  &--in {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &--text {
+    position: relative;
+    padding-top: 40px;
+    color: $white;
+    flex-basis: 50%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 170px;
+      height: 1px;
+      background-color: rgba($white, 0.4);
+    }
+
+    &:last-child {
+      flex-basis: 43%;
+    }
+
+    & p {
+      margin-bottom: 40px;
+    }
+
+    & .button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

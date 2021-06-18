@@ -1,5 +1,32 @@
 .footer {
-    border:
-        1px
-        solid red;
+  position: relative;
+
+  &--basement {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $blue-dark;
+
+    @supports (backdrop-filter: blur(40px)) {
+      background-color: rgba($blue-dark, 0.8);
+      backdrop-filter: blur(40px);
+    }
+  }
+
+  &--in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+  }
+
+  &--text {
+    display: flex;
+    color: rgba($white, 0.6);
+
+    & p:not(:last-child) {
+      margin-right: 80px;
+    }
+  }
 }
