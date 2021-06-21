@@ -7,17 +7,19 @@
   }
 
   &--content {
-    max-width: 560px;
+    max-width: 630px;
     flex-shrink: 0;
+  }
 
-    & .button {
-      display: inline-block;
-      margin-bottom: 75px;
-    }
+  &--review {
+    margin-bottom: 50px;
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 600;
   }
 
   &--image {
     position: relative;
-    right: -140px;
+    right: -70px;
   }
 }

@@ -15,6 +15,11 @@
     &.-centered {
       text-align: center;
     }
+
+    &.-overflowed {
+      position: relative;
+      top: -250px;
+    }
   }
 
   &--title {
@@ -24,8 +29,8 @@
 
     &.-h1 {
       margin-bottom: 55px;
-      font-size: 84px;
-      line-height: 92px;
+      font-size: 64px;
+      line-height: 70px;
     }
 
     &.-h2 {
@@ -54,9 +59,8 @@
     font-size: 23px;
     font-weight: 600;
     line-height: 28px;
-    color: $blue;
+    color: rgba($black, 0.4);
     letter-spacing: 0.11em;
-    text-transform: uppercase;
 
     &.-white {
       color: rgba($white, 0.6);

@@ -13,7 +13,7 @@
     transition: color 0.2s;
 
     &:hover {
-      color: darken($gray, 40%);
+      color: $blue;
     }
   }
 }
