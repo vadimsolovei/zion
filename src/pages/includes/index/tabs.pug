@@ -1,0 +1,21 @@
+section.tabs.block
+  .tabs--in.block--in.-centered
+    p.block--tag Лучшее предложение
+
+    h2.block--title.-h2 Цены на готовые изделия
+
+    .tabs--nav
+      include ./tabs_nav
+
+    .tabs--content 
+      #first_tab--panel.tabs--panel(role='tabpanel' aria-labelledby='first_tab--button').-active
+        img(src="./img/tab-img.png", alt="")
+
+      #second_tab--panel.tabs--panel(role='tabpanel' aria-labelledby='second_tab--button')
+        img(src="./img/tab-img1.png", alt="")
+
+      #third_tab--panel.tabs--panel(role='tabpanel' aria-labelledby='third_tab--button')
+        img(src="./img/tab-img.png", alt="")
+
+      #fourth_tab--panel.tabs--panel(role='tabpanel' aria-labelledby='fourth_tab--button')
+        img(src="./img/tab-img1.png", alt="")

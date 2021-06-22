@@ -1,1 +1,1 @@
-console.log(`document ready!`);
+import "./tabs.js";
