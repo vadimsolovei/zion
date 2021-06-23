@@ -1,0 +1,121 @@
+.swiper {
+  &-container {
+    padding-top: 120px!important;
+  }
+
+  &-slide {
+    padding: 110px 25px 25px;
+    position: relative;
+    box-shadow: 10px 10px 50px 3px rgba(39, 92, 141, 0.1);
+    box-sizing: border-box;
+    border-radius: 12px;
+    text-align: center;
+
+    &--image {
+      position: absolute;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      & img {
+        max-width: 66%;
+      }
+    }
+
+    &--title {
+      margin-bottom: 25px;
+      line-height: 26px;
+      font-weight: 600;
+    }
+
+    &--description {
+      margin-bottom: 30px;
+
+      &_row {
+        display: flex;
+        font-size: 16px;
+        line-height: 24px;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+
+      &_value {
+        flex-shrink: 0;
+      }
+
+      &_line {
+        margin: 0 10px;
+        width: 100%;
+        height: 2px;
+        background-image: url('../img/line-separator.png');
+        background-repeat: repeat-x;
+        align-self: flex-end;
+      }
+
+      &_parameter {
+        flex-shrink: 0;
+        font-weight: 300;
+      }
+    }
+
+    &--file {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $blue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      & svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &-navigation {
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    & svg {
+      width: 28px;
+      height: 28px;
+      padding: 15px;
+      fill: rgba(#11131E, 0.2);
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        fill: $blue;
+      }
+    }
+  }
+
+  &-pagination {
+    left: 50%;
+    transform: translateX(-50%) !important;
+
+    &-bullet {
+      width: 12px !important;
+      height: 12px !important;
+      background-color: #c6c6c6 !important;
+      opacity: 1 !important;
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      &-active {
+        background-color: $blue !important;
+      }
+    }
+  }
+}

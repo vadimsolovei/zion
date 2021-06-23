@@ -53,5 +53,8 @@
     "src/js/**/*.js",
     "src/img/**/*.svg",
     "src/styles/**/*.{sass,scss}"
-  ]
+  ],
+  "dependencies": {
+    "swiper": "^6.7.1"
+  }
 }
