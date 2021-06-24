@@ -1,28 +1,42 @@
-section.partners.block 
-  .block--in
-    h3.block--title.-h3 Наши партнеры:
+//- section.partners.block 
+//-   .block--in
+//-     p.block--tag Наши партнеры:
 
-    ul.partners--logos
-      li.partners--item 
-        img(src="./img/grand-hall.png", alt="Grand Hall logo")
+//-     ul.partners--logos
+//-       li.partners--item 
+//-         img(src="./img/grand-hall.png", alt="Grand Hall logo")
 
-      li.partners--item 
-        img(src="./img/sun-city.png", alt="Sun City logo")
+//-       li.partners--item 
+//-         img(src="./img/sun-city.png", alt="Sun City logo")
 
-      li.partners--item 
-        img(src="./img/jumbo.png", alt="Jumbo logo")
+//-       li.partners--item 
+//-         img(src="./img/jumbo.png", alt="Jumbo logo")
 
-      li.partners--item 
-        img(src="./img/terranova.png", alt="Terranova logo")
+//-       li.partners--item 
+//-         img(src="./img/terranova.png", alt="Terranova logo")
 
-      li.partners--item 
-        img(src="./img/partner-logo.png", alt="")
+//-       li.partners--item 
+//-         img(src="./img/partner-logo.png", alt="")
 
-      li.partners--item 
-        img(src="./img/inamstro.png", alt="Inamstro logo")
+//-       li.partners--item 
+//-         img(src="./img/inamstro.png", alt="Inamstro logo")
 
-      li.partners--item 
-        img(src="./img/maximilian.png", alt="Maximilian Pub&Grill logo")
+//-       li.partners--item 
+//-         img(src="./img/maximilian.png", alt="Maximilian Pub&Grill logo")
 
-      li.partners--item 
-        img(src="./img/astercon.png", alt="Astercon logo")
+//-       li.partners--item 
+//-         img(src="./img/astercon.png", alt="Astercon logo")
+
+mixin partners(tag='', title='')
+  section.partners.block
+    .block--in
+      if tag
+        p.block--tag= tag
+
+      else
+        h4.block--title.-h4 Эксклюзивный импортер ПВХ-профилей KMG ALTEST и оконно-дверной фурнитуры Endow.
+
+      block
+
+
+//- +partners('Наши партнеры:', 'img(src="./img/grand-hall.png", alt="Grand Hall logo")','img(src="./img/sun-city.png", alt="Sun City logo")','img(src="./img/jumbo.png", alt="Jumbo logo")','img(src="./img/terranova.png", alt="Terranova logo")','img(src="./img/partner-logo.png", alt="")','img(src="./img/inamstro.png", alt="Inamstro logo")','img(src="./img/maximilian.png", alt="Maximilian Pub&Grill logo")','img(src="./img/astercon.png", alt="Astercon logo")')
