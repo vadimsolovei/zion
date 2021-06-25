@@ -1,3 +1,5 @@
+@import "../mixins/media";
+
 .block {
   &.-padded {
     padding-top: 165px;
@@ -34,8 +36,8 @@
     }
 
     &.-h2 {
-      font-size: 72px;
-      line-height: 79px;
+      font-size: 52px;
+      line-height: 55px;
     }
 
     &.-h3 {
@@ -64,6 +66,17 @@
 
     &.-white {
       color: rgba($white, 0.6);
+    }
+  }
+}
+
+@include media-mobile {
+  .block {
+    &--title {
+      &.-h2 {
+        font-size: 72px;
+        line-height: 79px;
+      }
     }
   }
 }
