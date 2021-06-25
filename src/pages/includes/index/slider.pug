@@ -1,8 +1,41 @@
 section.slider.block 
   .slider--in.block--in
-    p.block--tag Надежный и долговечный
+    .slider--row
+      p.block--tag Надежный и долговечный
 
-    h2.block--title.-h2 ПВХ-профиль
+      h2.block--title.-h2 ПВХ-профиль
+
+      .slider--description 
+        .slider--description_item
+          .slider--description_item-parameter Количество камер
+          .slider--description_item-line
+
+        .slider--description_item
+          .slider--description_item-parameter Класс профиля
+          .slider--description_item-line
+
+        .slider--description_item
+          .slider--description_item-parameter Монтажная глубина
+          .slider--description_item-line
+
+        .slider--description_item
+          .slider--description_item-parameter Теплоизоляция
+          .slider--description_item-line
+
+        .slider--description_item
+          .slider--description_item-parameter Шумоизоляция
+          .slider--description_item-line
+
+        .slider--description_item
+          .slider--description_item-parameter Класс ветроустойчивости
+          .slider--description_item-line
 
     .slider--swiper
       include ./swiper
+
+    .slider--navigation
+      svg.slider--button_prev
+        use(xlink:href="./img/sprite.svg#arrow-left")
+
+      svg.slider--button_next
+        use(xlink:href="./img/sprite.svg#arrow-right")

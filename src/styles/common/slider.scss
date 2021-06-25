@@ -1,5 +1,114 @@
+@import "../mixins/media";
+
 .slider {
+  &--in {
+    position: relative;
+  }
+
+  &--description {
+    display: none;
+  }
+
   &--swiper {
     position: relative;
+    min-width: 0;
+  }
+
+  &--navigation {
+    display: none;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    & svg {
+      width: 28px;
+      height: 28px;
+      padding: 15px;
+      fill: rgba(#11131e, 0.2);
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        fill: $blue;
+      }
+    }
+  }
+}
+
+@include media-tablet {
+  .slider {
+    &--in {
+      display: flex;
+    }
+
+    &--row {
+      display: flex;
+      flex-direction: column;
+      padding-top: 87px;
+    }
+
+    &--swiper {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 18%;
+        height: 100%;
+        background: linear-gradient(
+          90.64deg,
+          #ffffff 6.26%,
+          #ffffff 55.16%,
+          rgba(255, 255, 255, 0) 100.01%
+        );
+        opacity: 0.4;
+        z-index: 2;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 10px;
+        height: 100%;
+        background: $white;
+        z-index: 2;
+      }
+    }
+
+    &--description {
+      display: block;
+
+      &_item {
+        display: flex;
+        margin-bottom: 14px;
+
+        &-parameter {
+          position: relative;
+          flex-shrink: 0;
+          margin-right: 10px;
+        }
+
+        &-line {
+          width: 100%;
+          height: 2px;
+          background-image: url("../img/line-separator.png");
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
+
+@include media-tablet-horizontal {
+  .slider {
+    &--navigation {
+      display: block;
+    }
   }
 }
