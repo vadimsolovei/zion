@@ -1,3 +1,5 @@
+@import "../mixins/media";
+
 .partners {
   margin-bottom: 150px;
 
@@ -6,10 +8,6 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
-    &.-padded {
-      padding: 0 115px;
-    }
   }
 
   &--item {
@@ -18,5 +16,15 @@
 
   & .block--title {
     max-width: 800px;
+  }
+}
+
+@include media-tablet {
+  .partners {
+    &--logos {
+      &.-padded {
+        padding: 0 115px;
+      }
+    }
   }
 }

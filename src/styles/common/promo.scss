@@ -1,3 +1,5 @@
+@import "../mixins/media";
+
 .promo {
   position: relative;
   padding-bottom: 225px;
@@ -14,7 +16,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -1px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -50,11 +52,17 @@
     & p {
       margin-bottom: 40px;
     }
+  }
+}
 
-    & .button {
-      position: absolute;
-      right: 0;
-      bottom: 0;
+@include media-tablet {
+  .promo {
+    &--text {
+      & .button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
     }
   }
 }

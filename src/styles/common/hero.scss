@@ -1,5 +1,7 @@
+@import "../mixins/media";
+
 .hero {
-  margin-bottom: 150px;
+  margin-bottom: 500px;
 
   &--in {
     display: flex;
@@ -19,7 +21,19 @@
   }
 
   &--image {
-    position: relative;
-    right: -70px;
+    position: absolute;
+    z-index: -1;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+@include media-tablet-horizontal {
+  .hero {
+    &--image {
+      right: -270px;
+    }
   }
 }
