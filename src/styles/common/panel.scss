@@ -1,0 +1,77 @@
+.panel {
+  padding: 40px 40px 160px;
+  background-color: $blue-dark;
+  border-radius: 24px;
+  text-align: left;
+  color: $white;
+
+  span {
+    font-size: 18px;
+    opacity: 0.6;
+  }
+
+  @supports (backdrop-filter: blur(40px)) {
+    background-color: rgba($blue-dark, 0.8);
+    backdrop-filter: blur(40px);
+  }
+
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px 40px;
+  }
+
+  &--content {
+    display: flex;
+    padding-top: 40px;
+    border-top: 1px solid rgba($white, 0.3);
+  }
+
+  &--option {
+    position: relative;
+
+    &_title {
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    &_price {
+      position: absolute;
+      top: 43%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $blue;
+
+      p {
+        display: inline;
+        padding: 10px;
+        background: $white;
+        border-radius: 50%;
+        font-size: 35px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &--footer {
+    &_list {
+      li {
+        position: relative;
+        padding-left: 15px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 4px;
+          height: 4px;
+          background-color: $white;
+          opacity: 0.6;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
