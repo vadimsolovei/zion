@@ -1,39 +1,45 @@
 @import "../mixins/media";
 
 .hero {
-  margin-bottom: 500px;
+  margin-bottom: 100px;
 
   &--in {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
+
+    @include media-laptop {
+      flex-wrap: nowrap;
+    }
   }
 
   &--content {
     max-width: 630px;
-    flex-shrink: 0;
+    margin-bottom: 60px;
   }
 
   &--review {
-    margin-bottom: 50px;
-    font-size: 40px;
-    line-height: 44px;
+    margin-bottom: 35px;
+    font-size: 26px;
+    line-height: 32px;
     font-weight: 600;
+
+    @include media-tablet {
+      margin-bottom: 50px;
+      font-size: 40px;
+      line-height: 44px;
+    }
   }
 
   &--image {
-    position: absolute;
-    z-index: -1;
 
-    & img {
+    @include media-tablet-horizontal {
+      right: -270px;
+    }
+
+    img {
       width: 100%;
     }
   }
 }
 
-@include media-tablet-horizontal {
-  .hero {
-    &--image {
-      right: -270px;
-    }
-  }
-}

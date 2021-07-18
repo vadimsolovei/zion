@@ -3,12 +3,7 @@
 .promo {
   position: relative;
   padding-bottom: 225px;
-  background-image: linear-gradient(
-      92.62deg,
-      $blue 8.61%,
-      rgba($blue, 0) 84.04%
-    ),
-    url("../img/footer-bg.jpg");
+  background-image: linear-gradient(92.62deg, $blue 8.61%, rgba($blue, 0) 84.04%), url("../img/footer-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
@@ -35,6 +30,14 @@
     color: $white;
     flex-basis: 50%;
 
+    @include media-tablet {
+      .button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -49,20 +52,16 @@
       flex-basis: 43%;
     }
 
-    & p {
+    p {
       margin-bottom: 40px;
-    }
-  }
-}
+      font-size: 20px;
+      line-height: 28px;
 
-@include media-tablet {
-  .promo {
-    &--text {
-      & .button {
-        position: absolute;
-        right: 0;
-        bottom: 0;
+      @include media-tablet {
+        font-size: 24px;
+        line-height: 31px;
       }
     }
   }
 }
+

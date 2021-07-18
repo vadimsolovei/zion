@@ -1,3 +1,5 @@
+@import "../mixins/media";
+
 .panel {
   padding: 40px 40px 160px;
   background-color: $blue-dark;
@@ -18,13 +20,34 @@
   &--header {
     display: flex;
     justify-content: space-between;
-    padding: 0 60px 40px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+
+    @include media-tablet-horizontal {
+      flex-wrap: nowrap;
+      padding-right: 60px;
+      padding-left: 60px;
+    }
+
+    &_item {
+      margin: 10px;
+
+      @include media-tablet-horizontal {
+        margin: 0;
+      }
+    }
   }
 
   &--content {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding-top: 40px;
     border-top: 1px solid rgba($white, 0.3);
+
+    @include media-laptop {
+      flex-wrap: nowrap;
+    }
   }
 
   &--option {
@@ -35,12 +58,32 @@
       text-align: center;
     }
 
+    &_image {
+      position: relative;
+
+      @include media-laptop {
+        position: static;
+      }
+    }
+
     &_price {
       position: absolute;
-      top: 43%;
-      left: 50%;
+      top: 50%;
+      left: 49%;
       transform: translate(-50%, -50%);
       color: $blue;
+
+      @include media-laptop {
+        top: 43%;
+      }
+
+      &.-centered {
+        top: 35%;
+
+        @include media-laptop {
+          top: 43%;
+        }
+      }
 
       p {
         display: inline;

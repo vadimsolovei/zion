@@ -1,13 +1,32 @@
-.tabs_nav {
-  margin-bottom: 300px;
+@import "../mixins/media";
 
-  & ul {
-    display: flex;
-    justify-content: center;
+.tabs_nav {
+  margin-bottom: 60px;
+
+  @include media-tablet-horizontal {
+    margin-bottom: 300px;
   }
 
-  & li:not(:last-child) {
-    margin-right: 60px;
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include media-tablet {
+      flex-wrap: nowrap;
+    }
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include media-tablet {
+      margin-bottom: 0;
+    }
+
+    @include media-tablet-horizontal {
+      margin-right: 60px;
+    }
   }
 
   &--button {

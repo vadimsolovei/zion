@@ -1,10 +1,14 @@
+@import "../mixins/media";
+
 .tabs {
   position: relative;
-  padding: 135px 0 735px;
-  background: linear-gradient(180deg, $white 0%, rgba($white, 0) 40.25%),
-    url("../img/tabs-bg.jpg");
-  background-repeat: no-repeat;
+  padding: 135px 0 390px;
+  background: linear-gradient(180deg, $white 0%, rgba($white, 0) 40.25%) url("../img/tabs-bg.jpg") no-repeat;
   background-size: cover;
+
+  @include media-tablet {
+    padding-bottom: 735px;
+  }
 
   &::after {
     content: "";
@@ -14,11 +18,8 @@
     right: 0;
     width: 100%;
     height: 40%;
-    background-color: linear-gradient(
-      0deg,
-      #0e6fff 6.24%,
-      rgba(14, 111, 255, 0) 100%
-    );
+    background-color: linear-gradient(0deg, #0e6fff 6.24%, rgba(14, 111, 255, 0) 100%);
+    z-index: -1;
   }
 
   &--panel {
@@ -28,7 +29,7 @@
       display: block;
     }
 
-    & img {
+    img {
       width: 100%;
     }
   }

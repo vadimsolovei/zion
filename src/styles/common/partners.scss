@@ -5,26 +5,29 @@
 
   &--logos {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-  }
 
-  &--item {
-    margin: 0 10px;
-  }
+    @include media-mobile {
+      flex-direction: row;
+    }
 
-  & .block--title {
-    max-width: 800px;
-  }
-}
+    @include media-tablet {
+      justify-content: space-between;
 
-@include media-tablet {
-  .partners {
-    &--logos {
-      &.-padded {
+      .-padded {
         padding: 0 115px;
       }
     }
+  }
+
+  &--item {
+    margin: 10px;
+  }
+
+  .block--title {
+    max-width: 800px;
   }
 }

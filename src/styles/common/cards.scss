@@ -7,6 +7,11 @@
   flex-wrap: wrap;
   text-align: left;
 
+  @include media-tablet-horizontal {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
   &--item {
     display: flex;
     flex-direction: column;
@@ -15,8 +20,17 @@
     background-color: rgba($blue-dark, 0.8);
     backdrop-filter: blur(40px);
 
+    @include media-tablet-horizontal {
+      max-width: 32%;
+    }
+
     &:not(:last-child) {
       margin-bottom: 40px;
+
+      @include media-tablet-horizontal {
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -76,18 +90,3 @@
   }
 }
 
-@include media-tablet-horizontal {
-  .cards {
-    flex-direction: row;
-    align-items: stretch;
-
-    &--item {
-      max-width: 32%;
-
-      &:not(:last-child) {
-        margin-right: 15px;
-        margin-bottom: 0;
-      }
-    }
-  }
-}

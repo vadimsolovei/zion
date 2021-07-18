@@ -1,3 +1,5 @@
+@import "../mixins/media";
+
 .footer {
   position: relative;
 
@@ -16,21 +18,35 @@
 
   &--in {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 50px 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    @include media-tablet {
+      justify-content: space-between;
+      padding: 50px 20px;
+    }
   }
 
   &--text {
     display: flex;
     color: rgba($white, 0.6);
 
-    & p:not(:last-child) {
-      margin-right: 80px;
+    p:not(:last-child) {
+      margin-right: 50px;
+
+      @include media-tablet {
+        margin-right: 80px;
+      }
     }
   }
 
   &--logo {
-    margin-right: 20px;
+    margin-bottom: 20px;
+
+    @include media-tablet {
+      margin-right: 20px;
+    }
   }
 }

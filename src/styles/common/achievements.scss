@@ -1,26 +1,45 @@
+@import "../mixins/media";
+
 .achievements {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: 65px;
+
+  @include media-tablet {
+    justify-content: space-between;
+  }
 
   &--item {
     display: flex;
     margin-bottom: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   &--icon {
     width: 66px;
-    margin-right: 50px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: center;
+    flex-basis: 100%;
+
+    @include media-tablet {
+      margin-bottom: 0;
+      margin-right: 50px;
+      flex-basis: auto;
+    }
   }
 
   &--description {
-    width: 460px;
+    max-width: 460px;
+    text-align: center;
 
-    & .block--title {
+    @include media-tablet {
+      text-align: left;
+    }
+
+    .block--title {
       margin-bottom: 10px;
     }
   }
