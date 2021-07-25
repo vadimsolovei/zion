@@ -32,6 +32,11 @@
   &--text {
     display: flex;
     color: rgba($white, 0.6);
+    font-size: 20px;
+
+    @include media-tablet {
+      font-size: inherit;
+    }
 
     p:not(:last-child) {
       margin-right: 50px;
