@@ -1,3 +1,5 @@
+@import "../mixins/media";
+
 .nav_sticky {
   display: none;
   justify-content: center;
@@ -11,6 +13,10 @@
   z-index: 5;
   text-align: center;
 
+  li {
+    margin-bottom: 15px;
+  }
+
   &--item {
     color: $gray;
     font-size: 21px;
@@ -20,18 +26,6 @@
 
     &:hover {
       color: $blue;
-    }
-  }
-
-  &--menu_close {
-    position: absolute;
-    right: 11px;
-    top: 37px;
-    padding: 10px;
-
-    svg {
-      width: 20px;
-      height: 20px;
     }
   }
 }

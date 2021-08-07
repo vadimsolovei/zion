@@ -12,9 +12,13 @@
 
   &--item {
     display: flex;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     flex-wrap: wrap;
     justify-content: center;
+
+    @include media-tablet {
+      margin-bottom: 100px;
+    }
   }
 
   &--icon {

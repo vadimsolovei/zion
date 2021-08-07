@@ -18,7 +18,7 @@
   }
 
   li:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     @include media-tablet {
       margin-bottom: 0;
@@ -30,13 +30,16 @@
   }
 
   &--button {
-    font-size: 32px;
-    line-height: 35px;
+    font-size: 26px;
     font-weight: 600;
     color: $gray;
     background: none;
     border: none;
     cursor: pointer;
+
+    @include media-tablet {
+      font-size: 32px;
+    }
 
     &:hover,
     &.-active {

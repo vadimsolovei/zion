@@ -6,12 +6,16 @@
   }
 
   &-slide {
-    padding: 110px 25px 25px;
+    padding: 80px 25px 25px;
     position: relative;
     box-shadow: 10px 10px 50px 3px rgba(39, 92, 141, 0.1);
     box-sizing: border-box;
     border-radius: 12px;
     text-align: center;
+
+    @include media-tablet {
+      padding-top: 110px;
+    }
 
     &-prev {
       box-shadow: none;
@@ -43,7 +47,11 @@
         line-height: 24px;
 
         &:not(:last-child) {
-          margin-bottom: 20px;
+          margin-bottom: 10px;
+
+          @include media-tablet {
+            margin-bottom: 20px;
+          }
         }
       }
 

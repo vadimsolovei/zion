@@ -1,14 +1,21 @@
-@import "utils/reset";
+@import "../mixins/media";
 
-@import "utils/normalize";
+@import "../utils/reset";
 
-@import "utils/variables";
+@import "../utils/normalize";
+
+@import "../utils/variables";
 
 body {
-  font-size: 24px;
+  font-size: 16px;
   font-family: "Open sans", sans-serif;
-  line-height: 31px;
+  line-height: 25px;
   color: $black;
+
+  @include media-tablet {
+    font-size: 24px;
+    line-height: 31px;
+  }
 }
 
 a {

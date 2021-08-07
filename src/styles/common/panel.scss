@@ -1,11 +1,15 @@
 @import "../mixins/media";
 
 .panel {
-  padding: 40px 40px 160px;
+  padding: 20px;
   background-color: $blue-dark;
   border-radius: 24px;
   text-align: left;
   color: $white;
+
+  @include media-tablet {
+    padding: 40px 40px 160px;
+  }
 
   span {
     font-size: 18px;

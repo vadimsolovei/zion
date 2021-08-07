@@ -1,7 +1,11 @@
 @import "../mixins/media";
 
 .partners {
-  margin-bottom: 150px;
+  margin-bottom: 75px;
+
+  @include media-tablet {
+    margin-bottom: 150px;
+  }
 
   &--logos {
     display: flex;
