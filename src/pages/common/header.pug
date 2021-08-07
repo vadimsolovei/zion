@@ -4,15 +4,28 @@ header.header.block
       .header--logo
         include ../includes/index/logo
 
-      .header--lang
-        p Ro
+      .header--links
+        .header--lang
+          a(href='#') Ro
+
+        .header--menu_open
+          svg
+            use(xlink:href="./img/sprite.svg#menu")
+
+        .header--menu_close
+          svg
+            use(xlink:href="./img/sprite.svg#close")
+
+
+        .header--nav_sticky
+          include ../includes/index/nav_sticky
 
     .header--right
       .header--nav
         include ../includes/index/nav
 
       .header--lang.-tablet
-        p Ro
+        a(href='#') Ro
 
       .header--button
         a.button.-small(href='tel:+37379450640') +373 79 450 640

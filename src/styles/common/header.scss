@@ -1,10 +1,16 @@
 @import "../mixins/media";
 
 .header {
-  margin: 30px 0 65px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: white;
+  z-index: 3;
+  padding: 30px 0;
 
-  @include media-laptop {
-    margin-bottom: 140px;
+  &.-with_shadow {
+    box-shadow: 0 2px 6px 0 #a3bac6;
   }
 
   &--in {
@@ -19,40 +25,65 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 35px;
 
     @include media-laptop {
       width: auto;
-      margin-bottom: 0;
     }
   }
 
   &--right {
-    display: flex;
-    flex-wrap: wrap;
+    display: none;
 
     @include media-laptop {
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
     }
   }
 
-  &--lang {
+  &--lang a {
     font-size: 21px;
     font-weight: bold;
     line-height: 28px;
-    color: $blue;
+    color: $gray;
+    transition: 0.2s;
 
-    &.-tablet {
-      display: none;
+    &:hover {
+      color: $blue;
     }
 
     @include media-laptop {
-      display: none;
+      margin-right: 40px;
+    }
+  }
 
-      &.-tablet {
-        display: block;
-        margin-right: 40px;
+  &--menu_open,
+  &--menu_close {
+    margin-top: 3px;
+    margin-left: 20px;
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: $gray;
+      transition: 0.2s;
+
+      &:hover {
+        fill: $blue;
       }
+    }
+  }
+
+  &--menu_close {
+    display: none;
+  }
+
+  &--links {
+    display: flex;
+
+    @include media-laptop {
+      display: none;
     }
   }
 }

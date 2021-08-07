@@ -1,0 +1,37 @@
+.nav_sticky {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  position: fixed;
+  top: 125px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  text-align: center;
+
+  &--item {
+    color: $gray;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 28px;
+    transition: 0.2s;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  &--menu_close {
+    position: absolute;
+    right: 11px;
+    top: 37px;
+    padding: 10px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
