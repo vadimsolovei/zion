@@ -22,7 +22,7 @@
     transform: translateX(-50%);
     z-index: 1;
 
-    & svg {
+    svg {
       width: 28px;
       height: 28px;
       padding: 15px;
@@ -58,13 +58,9 @@
         left: 0;
         width: 18%;
         height: 100%;
-        background: linear-gradient(
-          90.64deg,
-          #ffffff 6.26%,
-          #ffffff 55.16%,
-          rgba(255, 255, 255, 0) 100.01%
-        );
-        opacity: 0.4;
+        background:
+ linear-gradient(90.64deg, #ffffff 6.26%, #ffffff 55.16%, rgba(255, 255, 255, 0) 100.01%);
+        opacity: 0.6;
         z-index: 2;
       }
 
