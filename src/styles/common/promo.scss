@@ -3,54 +3,20 @@
 .promo {
   position: relative;
   padding-bottom: 225px;
-  background-color: $blue;
-
-  @include media-tablet {
-    background-image: linear-gradient(92.62deg, $blue 8.61%, rgba($blue, 0) 84.04%), url("../img/footer-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100%;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: -1px;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: linear-gradient(180deg, $blue 0%, rgba($blue, 0) 100%);
-    }
-  }
+  background-color: $blue-dark;
 
   &--in {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
 
   &--text {
     position: relative;
-    padding-top: 40px;
+    margin-bottom: 40px;
     color: $white;
     flex-basis: 50%;
-
-    @include media-tablet {
-      .button {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-      }
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 170px;
-      height: 1px;
-      background-color: rgba($white, 0.4);
-    }
 
     &:last-child {
       flex-basis: 43%;
@@ -61,10 +27,58 @@
       font-size: 16px;
       line-height: 24px;
 
+      &:last-of-type {
+        opacity: 0.6;
+      }
+
       @include media-tablet {
         margin-bottom: 40px;
         font-size: 24px;
         line-height: 31px;
+      }
+    }
+  }
+
+  &--banner {
+    position: relative;
+    max-width: 450px;
+    padding: 20px 20px 200px;
+    background-color: $gray-light;
+    background-size: contain;
+    border-radius: 16px;
+    z-index: 1;
+    overflow: hidden;
+
+    @include media-tablet {
+      padding: 32px 32px 350px;
+    }
+
+    @supports (backdrop-filter: blur(40px)) {
+      background-color: $gray-light;
+      backdrop-filter: blur(40px);
+    }
+
+    &_image {
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: -1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, $gray-light 0%, rgba(203, 207, 208, 0) 100%);
+      }
+
+      img {
+        width: 100%;
       }
     }
   }

@@ -1,0 +1,35 @@
+@import "../mixins/media";
+
+.mock {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: url("../img/tabs-bg.jpg") no-repeat center;
+  background-size: cover;
+
+  @include media-laptop {
+    height: 1165px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(180deg, $white 0%, rgba($white, 0) 40.25%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 75%;
+    background: linear-gradient(180deg, rgba(18, 58, 117, 0) 0%, #123a75 100%);
+  }
+}

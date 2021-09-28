@@ -12,14 +12,6 @@
   transition: 0.2s;
   white-space: nowrap;
 
-  &.-with_shadow {
-    box-shadow: 0 0 10px 6px darken($blue, 10%);
-
-    @include media-tablet {
-      box-shadow: none;
-    }
-  }
-
   @include media-tablet {
     padding: 18px 40px;
     font-size: 30px;

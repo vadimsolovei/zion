@@ -6,7 +6,7 @@
   }
 
   &.-blue {
-    background-color: $blue;
+    background-color: $blue-dark;
   }
 
   &--in {
@@ -97,7 +97,7 @@
     }
 
     &.-white {
-      color: rgba($white, 0.6);
+      color: $white;
     }
   }
 }

@@ -1,10 +1,10 @@
 @import "../mixins/media";
 
 .tabs_nav {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 
   @include media-tablet-horizontal {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
 
   ul {
