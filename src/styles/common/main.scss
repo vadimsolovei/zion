@@ -1,9 +1,9 @@
 @import "../mixins/media";
 
 main {
-  margin-top: 135px;
+  margin-top: 165px;
 
   @include media-laptop {
-    margin-top: 235px;
+    margin-top: 255px;
   }
 }

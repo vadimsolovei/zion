@@ -3,6 +3,13 @@
 .slider {
   &--in {
     position: relative;
+    padding: 0 20px;
+    text-align: center;
+
+    @include media-tablet {
+      padding: 0 0 0 100px;
+      text-align: left;
+    }
   }
 
   &--description {

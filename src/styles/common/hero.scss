@@ -2,20 +2,28 @@
 
 .hero {
   margin-bottom: 100px;
+  position: relative;
+
+  @include media-custom(1600px) {
+    margin-bottom: 200px;
+  }
 
   &--in {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    position: relative;
 
-    @include media-laptop {
+    @include media-custom(1200px) {
       flex-wrap: nowrap;
     }
   }
 
   &--content {
-    max-width: 630px;
     margin-bottom: 60px;
+
+    @include media-tablet-horizontal {
+      max-width: 40%;
+    }
   }
 
   &--review {
@@ -25,16 +33,27 @@
     font-weight: 600;
 
     @include media-tablet {
-      margin-bottom: 50px;
-      font-size: 40px;
-      line-height: 44px;
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    @include media-custom(1300px) {
+      font-size: 32px;
+      line-height: 36px;
     }
   }
 
   &--image {
+    margin-right: -40px;
+
+    @include media-tablet {
+      margin-right: -100px;
+    }
 
     @include media-tablet-horizontal {
-      right: -270px;
+      position: absolute;
+      left: 50%;
+      margin-right: 0;
     }
 
     img {

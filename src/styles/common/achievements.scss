@@ -12,12 +12,16 @@
 
   &--item {
     display: flex;
-    margin-bottom: 50px;
     flex-wrap: wrap;
+    margin-bottom: 50px;
     justify-content: center;
 
     @include media-tablet {
       margin-bottom: 100px;
+    }
+
+    @include media-tablet {
+      flex-wrap: nowrap;
     }
   }
 
@@ -36,11 +40,15 @@
   }
 
   &--description {
-    max-width: 460px;
     text-align: center;
 
     @include media-tablet {
+      max-width: 85%;
       text-align: left;
+    }
+
+    @include media-custom(1360px) {
+      max-width: 460px;
     }
 
     .block--title {

@@ -16,7 +16,11 @@
     position: relative;
     margin-bottom: 40px;
     color: $white;
-    flex-basis: 50%;
+    flex-basis: 100%;
+
+    @include media-custom(1300px) {
+      flex-basis: 50%;
+    }
 
     &:last-child {
       flex-basis: 43%;

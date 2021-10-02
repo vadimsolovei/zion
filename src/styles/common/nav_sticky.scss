@@ -14,14 +14,13 @@
   text-align: center;
 
   li {
-    margin-bottom: 15px;
+    margin-bottom: 8px;
   }
 
   &--item {
     color: $gray;
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 24px;
     transition: 0.2s;
 
     &:hover {

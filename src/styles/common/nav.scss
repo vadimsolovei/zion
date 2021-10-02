@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     margin-bottom: 35px;
 
-    @include media-laptop {
+    @include media-tablet-horizontal {
       margin-bottom: 0;
     }
 
@@ -23,9 +23,8 @@
   &--item {
     margin-right: 40px;
     color: $gray;
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 28px;
+    font-size: 18px;
+    line-height: 24px;
     transition: color 0.2s;
 
     &:hover {
